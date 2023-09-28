@@ -1,2 +1,23 @@
 <h1>custom radio button</h1>
 <tiff-custom-button></tiff-custom-button>
+<tiff-custom-form></tiff-custom-form>
+
+<div class="tiff">
+  <div class="tiff-header" (click)="isExpand=!isExpand">
+    <span class="close-icon">&times;</span>
+    tiffany 
+  </div>
+  <div class="tiff-body" [ngClass]="{expand: isExpand}">
+    <div class="tiff-content">
+      <div>ttt</div>
+      <div>ttt</div>
+      <div>ttt</div>
+      <div>ttt</div>
+      <div>tttttt</div>
+    </div>
+  </div>
+</div>
+
+<div class="circle"></div>
+
+<div class="polygon"></div>

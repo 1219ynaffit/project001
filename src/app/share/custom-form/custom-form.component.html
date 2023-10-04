@@ -1,8 +1,10 @@
-<form [formGroup]="form">
-  <label>姓名</label>
-  <input type="text" [formControl]="getFormControl('name')">
-  <label>信箱</label>
-  <input type="text" [formControl]="getFormControl('email')">
-</form>
-<button>送出</button>
-<button (click)="onClearForm()">清空</button>
+<div class="tiff-list">
+	<div
+		*ngFor="let item of list"
+		class="tiff-option"
+		[ngClass]="{ active: activeValue === item.value }"
+    (click)="dian(item.value)"
+	>
+		{{ item.name }}
+	</div>
+</div>

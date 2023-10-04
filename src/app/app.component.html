@@ -1,23 +1,58 @@
 <h1>custom radio button</h1>
-<tiff-custom-button></tiff-custom-button>
-<tiff-custom-form></tiff-custom-form>
+<div style="margin: auto; width: 760px; height: 100%; overflow: auto">
+	<div style="display: flex; flex-direction: column; gap: 16px">
+		<div class="tiff-card">
+			<h1>custom radio button</h1>
+			<tiff-custom-button></tiff-custom-button>
+		</div>
 
-<div class="tiff">
-  <div class="tiff-header" (click)="isExpand=!isExpand">
-    <span class="close-icon">&times;</span>
-    tiffany 
-  </div>
-  <div class="tiff-body" [ngClass]="{expand: isExpand}">
-    <div class="tiff-content">
-      <div>ttt</div>
-      <div>ttt</div>
-      <div>ttt</div>
-      <div>ttt</div>
-      <div>tttttt</div>
-    </div>
-  </div>
+		<div class="tiff-card">
+			<h1>手風琴</h1>
+			<div class="tiff">
+				<div class="tiff-header" (click)="isExpand = !isExpand">
+					<span class="close-icon">&times;</span>
+					tiffany
+				</div>
+				<div class="tiff-body" [ngClass]="{ expand: isExpand }">
+					<div class="tiff-content">
+						<div>ttt</div>
+						<div>ttt</div>
+						<div>ttt</div>
+						<div>ttt</div>
+						<div>tttttt</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tiff-card">
+			<h1>circle</h1>
+			<div class="circle"></div>
+		</div>
+
+		<div class="tiff-card">
+			<h1>clip path</h1>
+			<div class="polygon"></div>
+		</div>
+
+		<div class="tiff-card">
+			<h1>custom form component</h1>
+			<form [formGroup]="form">
+        <div>
+          <label>姓名</label>
+          <input type="text" formControlName="name" />
+        </div>
+        <div>
+          <label>信箱</label>
+          <input type="text" formControlName="email" />
+        </div>
+        <div>
+          <label>自訂元件</label>
+          <tiff-custom-form formControlName="tiff"></tiff-custom-form>
+        </div>
+			</form>
+			<button (click)="save()">送出</button>
+			<button (click)="onClearForm()">清空</button>
+		</div>
+	</div>
 </div>
-
-<div class="circle"></div>
-
-<div class="polygon"></div>
